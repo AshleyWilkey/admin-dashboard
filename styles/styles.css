@@ -1,0 +1,222 @@
+main {
+  display: grid;
+  width: 100%;
+  grid-template-rows: auto 1fr; /* First row auto to accommodate navbar, second row takes the remaining space */
+  grid-template-columns: 2fr 1fr; /* Single column by default */
+  height: 100vh; /* Full viewport height */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  font-family: "Karla", sans-serif;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  background-color: #1892d4;
+  color: white;
+  height: 100vh;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  color: azure;
+  text-decoration: none;
+}
+.sidebar img {
+  height: 1.2rem;
+  color: azure;
+  margin-right: 0.4rem;
+}
+.sidebar h1 {
+  display: flex;
+  align-items: center;
+  margin: 1.4rem 0.6rem;
+  font-size: 1.6rem;
+}
+.sidebar h1 img {
+  height: 2rem;
+}
+
+.sidebar-margin {
+  margin-bottom: 2rem;
+}
+
+.nav {
+  display: grid;
+  grid-row: 1 / 2; /* Navbar sits in the first row */
+  grid-column: 1 / -1; /* Spans across all columns */
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+.nav img {
+  height: 1.8rem;
+}
+.nav--top {
+  display: flex;
+  align-items: center;
+}
+.nav--top-search {
+  display: flex;
+  flex: 7;
+  align-items: center;
+  padding: 1rem;
+}
+.nav--top-search input {
+  border-radius: 25px;
+  min-width: 500px;
+  padding: 0.4rem;
+}
+
+.nav--top-profile {
+  display: flex;
+  flex: 3;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.nav--top-profile a {
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+}
+.nav--bottom {
+  display: flex;
+}
+.nav--bottom-profile {
+  display: flex;
+  flex: 6;
+  align-items: center;
+}
+.nav--bottom-profile img {
+  height: 3rem;
+  padding: 1rem;
+}
+
+.nav--bottom-profile span {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+.nav--bottom-buttons {
+  display: flex;
+  flex: 3;
+  align-items: center;
+  padding: 1rem;
+  justify-content: space-evenly;
+}
+.nav--bottom-buttons button {
+  border-radius: 25px;
+  min-width: 5rem;
+  padding: 0.4rem;
+  cursor: pointer;
+}
+.projects {
+  grid-row: 2 / 3; /* Content 1 sits in the second row */
+  grid-column: 1 / 2; /* Spanning first column */
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.projects h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+}
+.projects--card {
+  padding: 10px;
+  border: 1px solid #333;
+  border-left: 7px solid rgb(150, 96, 165);
+  border-radius: 10px;
+  box-shadow: rgba(163, 160, 160, 0.35) 0px 5px 15px;
+  padding: 1.6rem 1.6rem 1rem 1.6rem;
+}
+.projects--card-actions {
+  display: flex;
+  justify-content: right;
+  margin-top: 1rem;
+}
+.projects--card-actions a {
+  text-decoration: none;
+  margin-left: 1rem;
+}
+.projects--card-actions a img {
+  height: 1.6rem;
+}
+.feed {
+  grid-row: 2 / 3; /* Content 2 sits in the second row */
+  grid-column: 2 / 3; /* Spanning second column */
+  background-color: #ccc;
+  padding: 20px;
+}
+.projects h1,
+.feed h1 {
+  font-size: 1.6rem;
+  padding: 1rem;
+}
+
+.feed h3 {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.announcements-container {
+  display: grid;
+  grid-template-columns: repeat(1, 4fr);
+  gap: 1rem;
+  background-color: aliceblue;
+  padding: 2rem 1.2rem;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.announcements--feed {
+  border-bottom: solid 1px #333;
+  padding-bottom: 1rem;
+}
+.trending-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  background-color: aliceblue;
+  padding: 1.2rem;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.trending--feed img {
+  border: solid 1px #333;
+  border-radius: 50%;
+  height: 2.4rem;
+  margin-right: 1rem;
+  padding: 0.3rem;
+  background-color: azure;
+}
+.trending--feed a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.trending--feed-name {
+  font-weight: 600;
+}
